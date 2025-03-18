@@ -1,0 +1,93 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f4f4; /* Darker background for elegance */
+  color: #060000; /* Light text for contrast */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* SERVICES SECTION */
+.services {
+  margin-top: 60px;
+  background-color: black;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.services h3 {
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+/* GRID LAYOUT */
+.services-grid,
+.services-grid-two {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* CARD STYLING */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card h4 {
+  color: white;
+  margin: 10px 0;
+}
+
+.card p {
+  color: white;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .services-grid,
+  .services-grid-two {
+    grid-template-columns: repeat(1, 1fr); /* Two cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid,
+  .services-grid-two {
+    grid-template-columns: repeat(1, 1fr); /* One card per row */
+  }
+}

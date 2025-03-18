@@ -1,0 +1,92 @@
+/* Booking Section */
+.booking {
+  background: #f8f8f8;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-container {
+  background: white;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Logo */
+.booking-logo img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Heading */
+.booking-container h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.booking-container p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form Fields */
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  text-align: left;
+}
+
+/* Ensure Full-Width for Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Make Submit Button Full Width */
+.submit-btn {
+  grid-column: span 2;
+  background: #ff6600;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background: #e65c00;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    grid-column: span 1;
+  }
+}

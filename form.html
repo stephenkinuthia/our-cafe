@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico">
+
+  <link rel="stylesheet" href="./styles/form.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+</head>
+<body>
+  <section class="booking">
+    <div class="booking-container">
+      <!-- Logo -->
+      <div class="booking-logo">
+        <img src="images/home/logo.jpg" alt="Booking Logo">
+      </div>
+
+      <!-- Heading -->
+      <h2>Book Your Table</h2>
+      <p>Reserve a table at our restaurant</p>
+
+      <!-- Form -->
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="Enter your first name" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Enter your last name" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" min="1" placeholder="Number of guests" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Expected Time</label>
+          <input type="time" id="time" required>
+          <small class="error-message"></small>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+
+  <section class="footer">
+    <div class="footer-container">
+
+      <!-- Coffee Logo & Name -->
+      <div class="footer-coffee">
+        <div class="coffee-logo">
+          <img src="images/home/logo.jpg" alt="Coffee Logo">
+        </div>
+        <h3 class="coffee-name">Refreshment point</h3>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="footer-links">
+        <h3>Useful Links</h3>
+        <div class="links-list">
+          <a href="./About.html">About</a>
+          <a href="./Services.html">Services</a>
+          <a href="./why.html">Why Us</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <div class="contact-details">
+          <div class="contact-item">
+            <img src="images/download a (1).png" alt="Location Icon">
+            <p>Nairobi</p>
+          </div>
+          <div class="contact-item">
+            <img src="images/download a (2).jpg" alt="Email Icon">
+            <p>Refreshmentpoint4123@gmail.com</p>
+          </div>
+          <div class="contact-item">
+            <img src="images/download b (1).jpg" alt="Phone Icon">
+            <p>+254112849908</p>
+          </div>
+          <div class="contact-item">
+            <img src="images/download (5).png" alt="Clock Icon">
+            <p>Mon-Sun: 11:00 AM - 8:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-follow">
+        <h3>Follow</h3>
+        <div class="social-icons">
+          <img src="images/download (6).jpeg" alt="Instagram">
+          <img src="images/download.png" alt="Facebook">
+          <img src="images/whatsapp (1).jpg" alt="Twitter">
+          <img src="images/download (1).png" alt="WhatsApp">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-copyright">
+      <p>&copy; 2025 Refreshment Point. All rights reserved.</p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function (event) {
+      let isValid = true;
+
+      function showError(input, message) {
+        let errorElement = input.nextElementSibling;
+        errorElement.textContent = message;
+        errorElement.style.color = "red";
+        isValid = false;
+      }
+
+      function clearError(input) {
+        let errorElement = input.nextElementSibling;
+        errorElement.textContent = "";
+      }
+
+      // Get form values
+      let firstName = document.getElementById("first-name");
+      let lastName = document.getElementById("last-name");
+      let email = document.getElementById("email");
+      let phone = document.getElementById("phone");
+      let guests = document.getElementById("guests");
+      let time = document.getElementById("time");
+
+      // Validate first name
+      if (firstName.value.trim() === "") {
+        showError(firstName, "First name is required.");
+      } else {
+        clearError(firstName);
+      }
+
+      // Validate last name
+      if (lastName.value.trim() === "") {
+        showError(lastName, "Last name is required.");
+      } else {
+        clearError(lastName);
+      }
+
+      // Validate email format
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email.value.trim())) {
+        showError(email, "Enter a valid email address.");
+      } else {
+        clearError(email);
+      }
+
+      // Validate phone number (must be 10 digits)
+      let phonePattern = /^[0-9]{10}$/;
+      if (!phonePattern.test(phone.value.trim())) {
+        showError(phone, "Enter a valid 10-digit phone number.");
+      } else {
+        clearError(phone);
+      }
+
+      // Validate guests (must be at least 1)
+      if (guests.value.trim() === "" || parseInt(guests.value) < 1) {
+        showError(guests, "Enter at least 1 guest.");
+      } else {
+        clearError(guests);
+      }
+
+      // Validate time selection
+      if (time.value.trim() === "") {
+        showError(time, "Please select a time.");
+      } else {
+        clearError(time);
+      }
+
+      if (!isValid) {
+        event.preventDefault(); // Prevent form submission if validation fails
+      } else {
+        alert("Booking successful!");
+      }
+    });
+  </script>
+</body>
+</html>

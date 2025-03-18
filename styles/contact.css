@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Contact Section */
+.contact-main {
+  margin-top: 40vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Contact Container */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #ff6600;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #e65c00;
+}
+
+/* Contact Details */
+.contact-container-div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item-div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.contact-item-div img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Google Map */
+.map-container {
+  margin-top: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+  }
+
+  .contact-item-div {
+      flex-direction: column;
+      text-align: center;
+  }
+}

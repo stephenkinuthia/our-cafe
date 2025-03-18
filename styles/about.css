@@ -1,0 +1,117 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f4f4; /* Soft background */
+  color: #060000; /* Dark text for contrast */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* About Us Section */
+.about-us {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout for large screens */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 80px auto 30px auto;
+  padding: 40px;
+  max-width: 1100px;
+  background: rgba(255, 255, 255, 0.2); /* Glassmorphic effect */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  gap: 40px; /* Space between text and image */
+}
+
+/* About Text Container */
+.about-container {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.h3-line {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.about-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* About Image */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* Tablets (Below 900px) */
+@media (max-width: 900px) {
+  .about-us {
+    flex-direction: column; /* Stack items vertically */
+    max-width: 700px;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .about-container {
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 400px;
+  }
+}
+
+/* Mobile (Below 600px) */
+@media (max-width: 600px) {
+  .about-us {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .about-paragraph {
+    font-size: 1rem;
+  }
+
+  .about-image img {
+    max-width: 100%; /* Full width for small screens */
+  }
+}
+
+/* Extra Small Screens (Below 400px) */
+@media (max-width: 400px) {
+  .about-us {
+    padding: 15px;
+  }
+
+  .h3-line {
+    font-size: 1.5rem;
+  }
+
+  .about-paragraph {
+    font-size: 0.9rem;
+  }
+}
