@@ -114,7 +114,7 @@ h2 {
 /* Mobile (400px and below) */
 @media screen and (max-width: 400px) {
   .menu-grid {
-    grid-template-columns: repeat(2, 1fr); /* Maintain two per row */
+    grid-template-columns: repeat(2, 200px; /* Maintain two per row */
   }
 
   .card {
