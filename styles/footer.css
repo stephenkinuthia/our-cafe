@@ -158,25 +158,34 @@
 }
 
 /* Very Small Screens (Below 400px) */
+/* Very Small Screens (Below 400px) */
 @media screen and (max-width: 400px) {
-  .footer {
-    padding: 30px 10px;
+  .footer-contact {
+    text-align: center; /* Center-align content */
+    padding: 15px;
   }
 
-  .footer-container {
-    gap: 15px;
+  .contact-details {
+    align-items: center; /* Center-align the details */
+    text-align: center;
+    max-width: 100%;
+    gap: 10px; /* Reduce spacing for better fit */
   }
-  
+
+  .contact-item {
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+
   .contact-item img {
-    width: 20px;
-    height: 20px;
+    width: 24px; /* Adjust icon size for small screens */
+    height: 24px;
   }
 
   .contact-item p {
-    font-size: 14px;
-  }
-
-  .footer-copyright {
-    font-size: 12px;
+    font-size: 14px; /* Slightly smaller text for better fit */
+    text-align: center;
   }
 }
