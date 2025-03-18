@@ -181,7 +181,7 @@ overflow: hidden; /* Ensures image does not overflow */
       background: rgba(250, 2, 2, 0.9);
       padding: 8px;
       text-align: center;
-      height: 120px;
+      height: 130px;
   }
 
   .logo {
@@ -202,7 +202,8 @@ overflow: hidden; /* Ensures image does not overflow */
   */
   .nav-list {
     gap: 10px;
-    padding: 10px 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .nav-list li {
