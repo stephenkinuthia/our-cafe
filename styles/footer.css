@@ -158,8 +158,8 @@
   }
 }
 
-/* Very Small Screens (Below 480px) */
-@media screen and (max-width: 40px) {
+/* Very Small Screens (Below 400px) */
+@media screen and (max-width: 400px) {
   .footer {
     padding: 30px 10px;
   }
