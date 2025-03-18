@@ -210,6 +210,6 @@ overflow: hidden; /* Ensures image does not overflow */
       margin: 10px 0;
   }
   .nav-list li a{
-    font-size: 0.9em;
+    font-size: 0.6em;
   }
 }
