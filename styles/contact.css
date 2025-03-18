@@ -8,7 +8,7 @@ body {
 
 /* Main Contact Section */
 .contact-main {
-  margin-top: 40vh;
+  margin-top: 20vh;
   padding: 40px 20px;
   text-align: center;
 }
@@ -100,6 +100,27 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contact-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+  }
+
+  .contact-item-div {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+/* Responsive Design */
+@media (max-width: 400px) {
+  .contact-container {
+  max-width: 400px;
+}
+  .contact-form input,
+.contact-form textare {
+  width: 100%;
+}
+
+  
   .contact-container {
       grid-template-columns: 1fr;
       padding: 20px;
