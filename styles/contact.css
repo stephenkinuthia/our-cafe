@@ -122,7 +122,7 @@ body {
 
   
   .contact-container {
-      grid-template-columns: 370px;
+      grid-template-columns: 300px;
       padding: 10px;
   }
 
