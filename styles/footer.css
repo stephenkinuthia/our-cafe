@@ -167,9 +167,14 @@
   .footer-container {
     gap: 15px;
   }
+  .contact-item img {
+  width: 20px;
+  height: 20px;
+}
 
   .contact-item p {
      text-align: center;
+     font-size: 14px;
   }
 
   .footer-copyright {
