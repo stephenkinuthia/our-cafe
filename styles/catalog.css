@@ -111,7 +111,7 @@ h2 {
   }
 }
 
-/* Mobile (480px and below) */
+/* Mobile (400px and below) */
 @media screen and (max-width: 480px) {
   .menu-grid {
     grid-template-columns: 1fr;
