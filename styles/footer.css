@@ -53,7 +53,7 @@
 .links-list a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .links-list a:hover {
@@ -65,7 +65,7 @@
 .footer-contact {
   text-align: left;
   padding: 20px;
-  background: #222; /* Dark background */
+  background: #222;
   color: white;
 }
 
@@ -93,7 +93,6 @@
 .contact-item p {
   margin: 0;
   font-size: 16px;
-  text-align: left;
   color: white;
 }
 
@@ -167,14 +166,14 @@
   .footer-container {
     gap: 15px;
   }
+  
   .contact-item img {
-  width: 20px;
-  height: 20px;
-}
+    width: 20px;
+    height: 20px;
+  }
 
   .contact-item p {
-     text-align: left;
-     font-size: 14px;
+    font-size: 14px;
   }
 
   .footer-copyright {
