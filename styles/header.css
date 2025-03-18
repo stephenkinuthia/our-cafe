@@ -167,3 +167,47 @@ overflow: hidden; /* Ensures image does not overflow */
     font-size: 0.9em;
   }
 }
+@media (max-width: 400px) {
+
+  /*
+  /* Hide Navigation by Default */
+
+   header {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: rgba(250, 2, 2, 0.9);
+      padding: 8px;
+      text-align: center;
+      height: 120px;
+  }
+
+  .logo {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-list{
+    flex: 1;
+  }
+
+  /* Show Navigation When Active */
+   /*
+  .nav-list.active {
+      display: flex;
+  }
+
+  */
+  .nav-list {
+    gap: 15px;
+  }
+
+  .nav-list li {
+      margin: 10px 0;
+  }
+  .nav-list li a{
+    font-size: 0.9em;
+  }
+}
